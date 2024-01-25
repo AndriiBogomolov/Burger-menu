@@ -433,9 +433,9 @@ footer {
     width: 20rem;
   }
 
-  .burger-menu {
+  /* .burger-menu {
     display: block;
-  }
+  } */
 
   .bio {
     margin-top: 16px;
@@ -448,5 +448,33 @@ footer {
 
   .contact-form-container {
     max-width: 17.75rem;
+  }
+}
+
+/* Общие стили для бургер-меню */
+.burger-menu {
+  display: none; /* По умолчанию скрыто */
+  font-size: 20px; /* Размер иконки бургера */
+  cursor: pointer;
+}
+
+/* Стили для больших экранов (1200px) */
+@media screen and (min-width: 1200px) {
+  .burger-menu {
+    display: none; /* Скрыто на больших экранах */
+  }
+}
+
+/* Стили для средних экранов (768px) */
+@media screen and (max-width: 1200px) {
+  .burger-menu {
+    display: block; /* Показать на средних экранах */
+  }
+}
+
+/* Стили для маленьких экранов (320px) */
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: block; /* Показать на маленьких экранах */
   }
 }
