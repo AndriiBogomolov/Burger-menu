@@ -90,7 +90,7 @@ nav ul li {
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -453,7 +453,7 @@ footer {
 
 /* Общие стили для бургер-меню */
 .burger-menu {
-  display: block; /* По умолчанию скрыто */
+  display: none; /* По умолчанию скрыто */
   font-size: 20px; /* Размер иконки бургера */
   cursor: pointer;
 }
@@ -461,7 +461,7 @@ footer {
 /* Стили для больших экранов (1200px) */
 @media screen and (min-width: 1200px) {
   .burger-menu {
-    display: block; /* Скрыто на больших экранах */
+    display: none; /* Скрыто на больших экранах */
   }
 }
 
