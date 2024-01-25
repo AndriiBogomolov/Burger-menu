@@ -15,36 +15,36 @@ navLink.forEach((link) =>
   })
 );
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollUp = document.querySelector("#scroll-up");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const scrollUp = document.querySelector("#scroll-up");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      scrollUp.style.display = "block";
-    } else {
-      scrollUp.style.display = "none";
-    }
-    // below console returns the number of pixels by which the document is scrolled in the vertical direction
-    // console.log("Window Scroll Y:", window.scrollY);
-  });
+//   window.addEventListener("scroll", () => {
+//     if (window.scrollY > 0) {
+//       scrollUp.style.display = "block";
+//     } else {
+//       scrollUp.style.display = "none";
+//     }
+//     // below console returns the number of pixels by which the document is scrolled in the vertical direction
+//     // console.log("Window Scroll Y:", window.scrollY);
+//   });
 
-  scrollUp.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-    // console.log("Scroll to top button clicked!");
-  });
-});
+//   scrollUp.addEventListener("click", () => {
+//     window.scrollTo({
+//       top: 0,
+//       left: 0,
+//       behavior: "smooth",
+//     });
+//     // console.log("Scroll to top button clicked!");
+//   });
+// });
 
 // scroll to top functionaluty
-const scrollUp = document.querySelector("#scroll-up");
+// const scrollUp = document.querySelector("#scroll-up");
 
-scrollUp.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-});
+// scrollUp.addEventListener("click", () => {
+//   window.scrollTo({
+//     top: 0,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+// });
