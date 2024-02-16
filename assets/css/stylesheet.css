@@ -15,7 +15,7 @@
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
-  --transition: 0.3s;
+  --transition: 0.2s;
 }
 
 html {
@@ -48,6 +48,12 @@ body {
   font-family: var(--font-family);
 }
 
+.open {
+  display: flex !important;
+}
+
+/* Nav section */
+
 nav {
   position: sticky;
   top: 0;
@@ -59,6 +65,14 @@ nav {
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+  margin: 8px;
+}
+
+nav {
+  padding: 1.5rem 1rem;
 }
 
 nav h1 {
@@ -84,17 +98,115 @@ nav ul li {
   font-weight: var(--bold-font);
 }
 
-.burger-menu {
+/* Burger menu */
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 2px;
+  width: 100%;
+  transform: scale(1);
+  background-color: var(--primary-color);
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 48%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 48%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+@media screen and (max-width: 768px) {
+  body.open-menu {
+    overflow: hidden;
+  }
+  .burger {
+    display: flex;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    /* height: 100%; */
+    width: 80%;
+    top: 86px;
+    /* bottom: 0; */
+    margin: auto;
+    left: 10%;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: var(--bg-color);
+    animation: burgerAnimation 0.4s;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    /* transform: translateX(120%);*/
+    transform: translateX(0);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul li {
+    /* flex-direction: column;
+    row-gap: 38px; */
+    margin: 8px;
+  }
+}
+
+@keyframes burgerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .burger-menu {
   color: var(--primary-color);
   font-size: 2rem;
   border: 0;
   background-color: transparent;
   cursor: pointer;
   display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+} */
 
 .hero {
   display: flex;
@@ -111,7 +223,7 @@ nav ul li {
   max-width: 100%;
   height: auto;
   /* height: 37.5rem; */
-  width: 37.5rem;
+  width: 35rem;
 }
 
 .bio {
@@ -119,6 +231,11 @@ nav ul li {
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio {
+  margin-top: 16px;
+  width: 20.5rem;
 }
 
 .bio h1 {
@@ -219,10 +336,10 @@ nav ul li {
   margin-bottom: var(--bottom-margin);
 }
 
-/* .project-details1 {
+.project-details1 {
   margin-top: 10px;
   margin-bottom: 10px;
-} */
+}
 
 .project-card {
   background-color: #fff;
@@ -347,95 +464,92 @@ footer {
   margin: 10px;
 }
 
-/* media styles */
-@media screen and (max-width: 768px) {
-  nav {
-    padding: 1.5rem 1rem;
+nav {
+  padding: 1.5rem 1rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+/* nav ul {
+  transform: translateX(120%);
+  transform: translateX(0);
+  animation: burgerAnimation 0.4s;
+} */
+
+nav ul li {
+  margin: 8px;
+}
+
+.burger {
+  /* display: block; */
+  font-size: 1.7rem;
+}
+
+/* nav ul.show {
+  transform: translateX(0);
+} */
+
+.hero {
+  margin-top: 0rem;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* .bio {
+  margin-top: 16px;
+  width: 20.5rem;
+} */
+
+.more-about {
+  margin-top: 2rem;
+  padding: 1rem 3.5rem;
+}
+
+.more-about h2 {
+  text-align: center;
+}
+
+.more-about p {
+  text-align: justify;
+}
+
+.icon {
+  width: 5.875rem;
+  height: 5.25rem;
+}
+
+.projects-container {
+  flex-direction: column;
+}
+
+.project-container {
+  width: 20.875rem;
+}
+
+.contact-form-container {
+  max-width: 23.75rem;
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1rem;
   }
 
-  nav ul {
-    position: fixed;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
-  }
+  /* nav {
+    padding: 1rem 0.7rem;
+  } */
 
-  nav ul li {
-    margin: 8px;
+  .hero-img {
+    margin-top: 0rem;
+    width: 15rem;
   }
 
   .burger-menu {
     display: block;
+    font-size: 1.5rem;
   }
-
-  nav ul.show {
-    transform: translateX(0);
-  }
-
-  .hero {
-    margin-top: 0rem;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .hero-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    /* height: 37.5rem; */
-    width: 35rem;
-  }
-
-  .bio {
-    margin-top: 16px;
-    width: 20.5rem;
-  }
-
-  .more-about {
-    margin-top: 2rem;
-    padding: 1rem 3.5rem;
-  }
-
-  .more-about h2 {
-    text-align: center;
-  }
-
-  .more-about p {
-    text-align: justify;
-  }
-
-  .icon {
-    width: 5.875rem;
-    height: 5.25rem;
-  }
-
-  .projects-container {
-    flex-direction: column;
-  }
-
-  .project-container {
-    width: 20.875rem;
-  }
-
-  .contact-form-container {
-    max-width: 23.75rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .hero-img {
-    margin-top: 0rem;
-    width: 20rem;
-  }
-
-  /* .burger-menu {
-    display: block;
-  } */
 
   .bio {
     margin-top: 16px;
@@ -448,33 +562,5 @@ footer {
 
   .contact-form-container {
     max-width: 17.75rem;
-  }
-}
-
-/* Общие стили для бургер-меню */
-.burger-menu {
-  display: none; /* По умолчанию скрыто */
-  font-size: 20px; /* Размер иконки бургера */
-  cursor: pointer;
-}
-
-/* Стили для больших экранов (1200px) */
-@media screen and (min-width: 1200px) {
-  .burger-menu {
-    display: none; /* Скрыто на больших экранах */
-  }
-}
-
-/* Стили для средних экранов (768px) */
-@media screen and (max-width: 1200px) {
-  .burger-menu {
-    display: block; /* Показать на средних экранах */
-  }
-}
-
-/* Стили для маленьких экранов (320px) */
-@media screen and (max-width: 768px) {
-  .burger-menu {
-    display: block; /* Показать на маленьких экранах */
   }
 }
