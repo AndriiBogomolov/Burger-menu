@@ -228,15 +228,11 @@ nav ul li {
 }
 
 .bio {
-  width: 25rem;
+  width: 20.5rem;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
-}
-
-.bio {
   margin-top: 16px;
-  width: 20.5rem;
 }
 
 .bio h1 {
@@ -554,7 +550,7 @@ nav ul li {
 
   .bio {
     margin-top: 16px;
-    width: 18.3rem;
+    width: 15rem;
   }
 
   .project-container {

@@ -73,3 +73,17 @@ scrollUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Функция для обновления года
+function updateYear() {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = currentYear;
+}
+
+// Вызываем функцию при загрузке страницы
+document.addEventListener("DOMContentLoaded", updateYear);
+
+// Вызываем функцию каждый раз при смене года
+document.addEventListener("DOMContentLoaded", function () {
+  setInterval(updateYear, 1000);
+});
