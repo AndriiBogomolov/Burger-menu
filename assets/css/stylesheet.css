@@ -170,7 +170,7 @@ h1 {
 }
 
 .bio {
-  width: 25rem;
+  width: 20.5rem;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
@@ -208,8 +208,8 @@ h1 {
   margin-top: 2.5rem;
 }
 
-.skills-header {
-  margin-bottom: 1rem;
+.skill-header {
+  margin-bottom: 2rem;
 }
 
 .skills-wrapper img {
@@ -409,7 +409,7 @@ footer {
     padding: 50px 40px;
     background-color: var(--bg-color);
     animation: burgerAnimation 0.4s;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 3rem;
     text-align: center;
     transform: translateX(0);
     transition: transform 0.5s ease-in;
@@ -466,114 +466,76 @@ footer {
     max-width: 23.75rem;
   }
 
-  /* .projects-container {
-  flex-direction: column;
-} */
-  /* 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  width: auto;
-  height: auto;
-  margin: auto;
-}
+  .projects-container {
+    flex-direction: column;
+  }
 
-.hero-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  width: 35rem;
-} */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
 
-  /* .bio {
-  width: 20.5rem;
-  padding: 0.625rem;
-  border-radius: 6px;
-  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
-  margin-top: 16px;
-} */
-  /* 
-.bio h1 {
-  margin-bottom: var(--bottom-margin);
-}
+  .hero-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 35rem;
+  }
 
-.bio p {
-  line-height: var(--line-height);
-  padding: 0.3rem 0;
-}
+  .skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
 
-.more-about {
-  background-color: var(--bg-color);
-  padding: 1rem 6rem;
-}
+  .skill-header {
+    margin-bottom: 1.5rem;
+  }
 
-.more-about h2 {
-  margin-bottom: var(--bottom-margin);
-  text-align: center;
-}
+  .skills-wrapper img {
+    padding: 1.25rem;
+  }
 
-.more-about p {
-  line-height: var(--line-height);
-  padding: 0.4rem;
-}
+  .icon {
+    width: 7.875rem;
+    height: 7.25rem;
+  }
 
-.skills {
-  max-width: 68.75rem;
-  margin: auto;
-  text-align: center;
-  margin-top: 2.5rem;
-}
+  /* .icon-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 10px;
+  } */
 
-.skills-header {
-  margin-bottom: 1rem;
-} */
+  /* .projects {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+  }
 
-  /* .skills-wrapper img {
-  padding: 1.25rem; */
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  text-align: center; */
-  /* } */
+  .project-pic {
+    width: 65%;
+    height: 60%;
+  }
 
-  /* .icon {
-  width: 11.875rem;
-  height: 11.25rem;
-}
+  .project-pic1 {
+    width: 75%;
+    height: 70%;
+  } */
 
-.icon-card {
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 10px;
-}*/
-
+  .projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
   /*
-.projects {
-  background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: 2rem;
-}
-
-.project-pic {
-  width: 65%;
-  height: 60%;
-}
-
-.project-pic1 {
-  width: 75%;
-  height: 70%;
-}
-
-/* .projects-title {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
 .project-container {
   text-align: center;
   width: 21.875rem;
@@ -713,26 +675,11 @@ footer {
   /* font-size: 1.7rem;
 } */
 
-  /* .hero {
-  margin-top: 0rem;
-  flex-direction: column;
-  gap: 2.5rem;
-} */
-
   /* .bio {
   margin-top: 16px;
   width: 20.5rem;
 } */
-
-  /* .more-about {
-  margin-top: 2rem;
-  padding: 1rem 3.5rem;
-} */
-
-  /* .more-about h2 {
-  text-align: center;
-}
-
+  /*
 .more-about p {
   text-align: justify;
 }
@@ -748,10 +695,6 @@ footer {
 
 .project-container {
   width: 20.875rem;
-}
-
-.contact-form-container {
-  max-width: 23.75rem;
 } */
 }
 /* @media screen and (max-width: 320px) { */
