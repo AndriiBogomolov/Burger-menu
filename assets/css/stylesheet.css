@@ -421,6 +421,7 @@ footer {
   }
 
   .hero {
+    gap: 2rem;
     flex-direction: column;
   }
 
