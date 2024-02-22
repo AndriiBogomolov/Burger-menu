@@ -421,9 +421,7 @@ footer {
   }
 
   .hero {
-    margin-top: 0rem;
     flex-direction: column;
-    gap: 2.5rem;
   }
 
   @keyframes burgerAnimation {
@@ -470,7 +468,7 @@ footer {
     flex-direction: column;
   }
 
-  .hero {
+  /* .hero {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -485,17 +483,17 @@ footer {
     max-width: 100%;
     height: auto;
     width: 35rem;
-  }
+  } */
 
   .skills {
     max-width: 68.75rem;
     margin: auto;
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
   }
 
   .skill-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .skills-wrapper img {
