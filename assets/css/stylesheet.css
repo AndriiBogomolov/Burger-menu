@@ -93,10 +93,6 @@ nav ul {
   gap: 1.9rem;
 }
 
-/* h1 {
-  font-size: 1.2rem;
-} */
-
 /* Burger menu */
 
 .burger {
@@ -423,6 +419,10 @@ footer {
   .hero {
     gap: 2rem;
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.2rem;
   }
 
   @keyframes burgerAnimation {
