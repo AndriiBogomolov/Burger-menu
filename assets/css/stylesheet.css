@@ -70,7 +70,7 @@ nav {
 }
 
 nav ul li {
-  margin: 8px;
+  /* margin: 8px; */
   font-weight: var(--bold-font);
 }
 
@@ -93,9 +93,9 @@ nav ul {
   gap: 1.9rem;
 }
 
-h1 {
+/* h1 {
   font-size: 1.2rem;
-}
+} */
 
 /* Burger menu */
 
@@ -713,6 +713,11 @@ footer {
   .burger-menu {
     display: block;
     font-size: 1.5rem;
+  }
+
+  .burger {
+    width: 25px;
+    height: 15px;
   }
 
   .bio {
