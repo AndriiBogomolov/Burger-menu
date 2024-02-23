@@ -405,7 +405,7 @@ footer {
     padding: 50px 40px;
     background-color: var(--bg-color);
     animation: burgerAnimation 0.4s;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;
     text-align: center;
     transform: translateX(0);
     transition: transform 0.5s ease-in;
@@ -710,8 +710,8 @@ footer {
     width: 15rem;
   }
 
-  .burger-menu {
-    display: block;
+  .burger {
+    /* display: block; */
     font-size: 1.5rem;
   }
 
