@@ -495,7 +495,8 @@ footer {
   }
 }
 
-@media screen and (max-width: 420px) {
+/* @media screen and (max-width: 320px)  */
+@media only screen and (min-width: 320px) and (max-width: 425px) {
   h1 {
     font-size: 1rem;
   }
@@ -535,7 +536,9 @@ footer {
   .contact-form-container {
     max-width: 17.75rem;
   }
-
+  .skills-wrapper img {
+    padding: 1.25rem;
+  }
   .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -549,5 +552,10 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 1px;
+  }
+
+  .icon {
+    width: 6rem;
+    height: 6rem;
   }
 }
